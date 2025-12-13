@@ -9,4 +9,8 @@ class Content extends Model
     protected $table = 'content';
 
     protected $fillable = ['type', 'title', 'content', 'image_path', 'link', 'is_active', 'sort_order', 'published_at'];
+
+    protected $casts = [
+        'published_at' => 'datetime',
+    ];
 }

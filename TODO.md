@@ -1,20 +1,15 @@
-# Home Page UI Redesign Tasks
+# TODO: Update Home Page UI/UX to Match Provided HTML Design
 
-## Completed
-- [x] Analyze current home.blade.php structure
-- [x] Review specification requirements
-- [x] Plan the redesign
-
-## In Progress
-- [ ] Update HomeController to fetch programs
-- [ ] Redesign home.blade.php with new header
-- [ ] Update hero section
-- [ ] Update stats section
-- [ ] Add programs section
-- [ ] Update announcements section
-- [ ] Add Why Choose Us section
-- [ ] Add testimonials section
-- [ ] Update footer
-- [ ] Install GSAP and AOS for animations
-- [ ] Seed programs data
-- [ ] Test responsiveness and links
+## Steps to Complete
+- [ ] Update header section to match provided HTML structure
+- [ ] Update hero section with gradient background and content
+- [ ] Update stats section with quick stats cards
+- [ ] Update programs section, keeping Laravel dynamic data
+- [ ] Update announcements section, keeping Laravel dynamic data
+- [ ] Add why-choose section
+- [ ] Update gallery section, keeping Laravel dynamic data
+- [ ] Add footer section
+- [ ] Add Google Fonts link for Poppins and Inter
+- [ ] Add inline CSS styles from provided HTML
+- [ ] Remove testimonials section (not in provided HTML)
+- [ ] Test the updated page for rendering and functionality
