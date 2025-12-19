@@ -20,7 +20,6 @@
         </nav>
         <div class="buttons">
             <a href="/apply"><button class="btn btn-primary">Apply Online</button></a>
-            <a href="/status"><button class="btn btn-secondary">Student Portal</button></a>
         </div>
     </header>
 

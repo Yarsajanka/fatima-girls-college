@@ -39,12 +39,12 @@ class ApplicationController extends Controller
         return redirect()->route('status')->with('success', 'Application submitted successfully!');
     }
 
-    public function status()
+    public function checkStatus(Request $request = null)
     {
         return view('status');
     }
 
-    public function checkStatus(Request $request)
+    public function getStatus(Request $request)
     {
         $request->validate([
             'cnic' => 'required|string|max:15',
