@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Women's College - Admission</title>
+    <title>Admission - Fatima Girls College Amin Pur</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     @vite(['resources/css/home.css'])
 </head>
 <body>
     <!-- Header/Navbar -->
     <header class="header">
-        <div class="logo">Women's College</div>
+        <div class="logo">
+            <img src="{{ asset('images/college_logo.png') }}" alt="Fatima Girls College Amin Pur Logo" height="40">
+        </div>
         <nav class="menu">
             <a href="/">Home</a>
             <a href="/about">About Us</a>
@@ -24,17 +26,15 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Start Your Journey Here</h1>
+    <section class="page-hero" style="text-align: center; width: 100%;">
+        <div class="hero-content" style="text-align: center; width: 100%;">
+            <h1 class="college-name">Fatima Girls College Amin Pur</h1>
+            <h3>Start Your Journey Here</h3>
             <p>Join our community of empowered women</p>
-            <div class="buttons">
+            <div class="buttons" style="text-align: center; width: 100%;">
                 <a href="/apply"><button class="btn btn-primary">Apply Now</button></a>
                 <a href="/programs"><button class="btn btn-secondary">View Programs</button></a>
             </div>
-        </div>
-        <div class="hero-image">
-            <img src="https://via.placeholder.com/500x400?text=Admission+Illustration" alt="Admission illustration">
         </div>
     </section>
 
@@ -141,6 +141,26 @@
             </div>
         </div>
     </section>
+
+    <!-- Selected Candidates List -->
+    @if($selectedCandidatesPdf)
+    <section class="admission-section">
+        <div class="container">
+            <h2>Selected Candidates</h2>
+            <div class="card mb-4">
+                <div class="card-header bg-success text-white">
+                    <h4 class="mb-0">{{ $selectedCandidatesPdf->title }}</h4>
+                </div>
+                <div class="card-body">
+                    <p>{{ $selectedCandidatesPdf->content }}</p>
+                    <a href="{{ asset('storage/' . $selectedCandidatesPdf->image_path) }}" target="_blank" class="btn btn-success btn-lg">
+                        <i class="fas fa-download me-2"></i>Download Selected Candidates List (PDF)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    @endif
 
     <!-- Admission Guidelines -->
     <section class="admission-section">

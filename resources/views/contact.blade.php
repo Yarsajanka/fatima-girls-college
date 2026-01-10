@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Women's College</title>
+    <title>Contact Us - Fatima Girls College Amin Pur</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     @vite(['resources/css/home.css'])
 </head>
 <body>
     <!-- Header/Navbar -->
     <header class="header">
-        <div class="logo">Women's College</div>
+        <div class="logo">
+            <img src="{{ asset('images/college_logo.png') }}" alt="Fatima Girls College Amin Pur Logo" height="40">
+        </div>
         <nav class="menu">
             <a href="/">Home</a>
             <a href="/about">About Us</a>
@@ -24,15 +26,12 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Get In Touch</h1>
+    <section class="page-hero">
+        <div class="hero-content" style="text-align: center; width: 100%;">
+            <h1 class="college-name">Fatima Girls College Amin Pur</h1>
+            <h3>Get In Touch</h3>
             <p>We'd love to hear from you. Reach out to us with any questions.</p>
         </div>
-        <div class="hero-image">
-            <img src="https://via.placeholder.com/500x400?text=Contact+Illustration" alt="Contact illustration">
-        </div>
-    </section>
 
     <!-- Contact Information -->
     <section class="contact-info">
