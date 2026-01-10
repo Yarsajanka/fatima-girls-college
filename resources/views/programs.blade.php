@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programs - Women's College</title>
+    <title>Programs - Fatima Girls College Amin Pur</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     @vite(['resources/css/home.css'])
 </head>
 <body>
     <!-- Header/Navbar -->
     <header class="header">
-        <div class="logo">Women's College</div>
+        <div class="logo">
+            <img src="{{ asset('images/college_logo.png') }}" alt="Fatima Girls College Amin Pur Logo" height="40">
+        </div>
         <nav class="menu">
             <a href="/">Home</a>
             <a href="/about">About Us</a>

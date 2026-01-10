@@ -3,14 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Women's College - Home</title>
+    <title>Fatima Girls College Amin Pur - Home</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     @vite(['resources/css/home.css'])
 </head>
 <body>
     <!-- Header/Navbar -->
     <header class="header">
-        <div class="logo">Women's College</div>
+        <div class="logo">
+            <img src="{{ asset('images/college_logo.png') }}" alt="Fatima Girls College Amin Pur Logo" height="40">
+        </div>
+        <div>
+  <p style="color: pink; font-weight: bold; font-style: italic;">
+    Fatima Girls College Amin Pur
+  </p>
+</div>
+
         <nav class="menu">
             <a href="/">Home</a>
             <a href="/about">About Us</a>
@@ -26,7 +34,8 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Empowering Women Through Education</h1>
+            <h1 class="college-name">Fatima Girls College Amin Pur</h1>
+            <h4>Empowering Women Through Education</h4>
             <p>Admissions Open for 2025</p>
             <div class="buttons">
                 <a href="/apply"><button class="btn btn-primary">Apply Now</button></a>
@@ -34,7 +43,7 @@
             </div>
         </div>
         <div class="hero-image">
-            <img src="https://via.placeholder.com/500x400?text=Female+Students+Illustration" alt="Illustration of female students">
+            <img src="{{ asset('images/studentillustrate.jpeg') }}" alt="Illustration of female students">
         </div>
     </section>
 
@@ -163,7 +172,7 @@
                 </ul>
             </div>
             <div class="why-image">
-                <img src="https://via.placeholder.com/600x400?text=Campus+Image" alt="Campus image">
+                <img src="{{ asset('images/campusiamge.jpeg') }}" alt="Fatima Girls College Amin Pur Campus">
             </div>
         </div>
     </section>

@@ -9,8 +9,7 @@ class ContactController extends Controller
 {
     public function index()
     {
-        $contact = Content::where('type', 'contact')->where('is_active', true)->first();
-        return view('contact', compact('contact'));
+        return view('contact');
     }
 
     public function send(Request $request)
