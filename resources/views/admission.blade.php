@@ -26,12 +26,12 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="page-hero" style="text-align: center; width: 100%;">
-        <div class="hero-content" style="text-align: center; width: 100%;">
+    <section class="hero">
+        <div class="hero-content">
             <h1 class="college-name">Fatima Girls College Amin Pur</h1>
             <h3>Start Your Journey Here</h3>
             <p>Join our community of empowered women</p>
-            <div class="buttons" style="text-align: center; width: 100%;">
+            <div class="buttons">
                 <a href="/apply"><button class="btn btn-primary">Apply Now</button></a>
                 <a href="/programs"><button class="btn btn-secondary">View Programs</button></a>
             </div>

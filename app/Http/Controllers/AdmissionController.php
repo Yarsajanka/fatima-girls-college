@@ -13,7 +13,8 @@ class AdmissionController extends Controller
         $eligibility = Content::where('type', 'eligibility_criteria')->where('is_active', true)->first();
         $documents = Content::where('type', 'required_documents')->where('is_active', true)->first();
         $guidelines = Content::where('type', 'admission_guidelines')->where('is_active', true)->first();
+        $selectedCandidatesPdf = Content::where('type', 'selected_candidates_pdf')->where('is_active', true)->first();
 
-        return view('admission', compact('schedule', 'eligibility', 'documents', 'guidelines'));
+        return view('admission', compact('schedule', 'eligibility', 'documents', 'guidelines', 'selectedCandidatesPdf'));
     }
 }
