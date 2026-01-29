@@ -75,44 +75,36 @@
         <div class="container">
             <h2>Programs We Offer</h2>
             <div class="programs-grid">
-                @forelse($programs ?? [] as $program)
                 <div class="program-card">
-                    <h3>{{ $program->name }}</h3>
-                    <p>Duration: {{ $program->duration_years }} Year{{ $program->duration_years > 1 ? 's' : '' }}<br>Eligibility: {{ $program->eligibility_criteria ?? 'High School Diploma' }}</p>
-                    <a href="/programs"><button class="btn btn-outline">View Details</button></a>
-                </div>
-                @empty
-                <div class="program-card">
-                    <h3>Computer Science</h3>
-                    <p>Duration: 4 Years<br>Eligibility: High School Diploma</p>
+                    <h3>BS Computer Science</h3>
+                    <p>Duration: 4 Years<br>Eligibility: Intermediate with minimum 50% marks</p>
                     <a href="/programs"><button class="btn btn-outline">View Details</button></a>
                 </div>
                 <div class="program-card">
-                    <h3>Business Admin</h3>
-                    <p>Duration: 3 Years<br>Eligibility: High School Diploma</p>
+                    <h3>F.A</h3>
+                    <p>Duration: 2 Years<br>Eligibility: Matriculation with minimum 60% marks</p>
                     <a href="/programs"><button class="btn btn-outline">View Details</button></a>
                 </div>
                 <div class="program-card">
-                    <h3>Engineering</h3>
-                    <p>Duration: 4 Years<br>Eligibility: High School Diploma</p>
+                    <h3>F.Sc Pre-Engineering</h3>
+                    <p>Duration: 2 Years<br>Eligibility: Matric Science with minimum 65% marks</p>
                     <a href="/programs"><button class="btn btn-outline">View Details</button></a>
                 </div>
                 <div class="program-card">
-                    <h3>Arts & Humanities</h3>
-                    <p>Duration: 3 Years<br>Eligibility: High School Diploma</p>
+                    <h3>F.Sc Pre-Medical</h3>
+                    <p>Duration: 2 Years<br>Eligibility: Matric Science with minimum 65% marks</p>
                     <a href="/programs"><button class="btn btn-outline">View Details</button></a>
                 </div>
                 <div class="program-card">
-                    <h3>Health Sciences</h3>
-                    <p>Duration: 4 Years<br>Eligibility: High School Diploma</p>
+                    <h3>ICOM</h3>
+                    <p>Duration: 2 Years<br>Eligibility: Matric with minimum 60% marks</p>
                     <a href="/programs"><button class="btn btn-outline">View Details</button></a>
                 </div>
                 <div class="program-card">
-                    <h3>Education</h3>
-                    <p>Duration: 2 Years<br>Eligibility: Bachelor's Degree</p>
+                    <h3>ICS</h3>
+                    <p>Duration: 2 Years<br>Eligibility: Matric with minimum 60% marks</p>
                     <a href="/programs"><button class="btn btn-outline">View Details</button></a>
                 </div>
-                @endforelse
             </div>
         </div>
     </section>
@@ -122,39 +114,18 @@
         <div class="container">
             <h2>Latest Announcements</h2>
             <div class="announcements-list">
-                @forelse($announcements ?? [] as $announcement)
                 <div class="announcement-card">
-                    <div class="date-badge">{{ $announcement->published_at ? \Carbon\Carbon::parse($announcement->published_at)->format('M d') : 'Recent' }}</div>
-                    <h3>{{ $announcement->title }}</h3>
-                    <p>{{ Str::limit($announcement->content, 100) }}</p>
-                    <a href="#">Read More</a>
-                </div>
-                @empty
-                <div class="announcement-card">
-                    <div class="date-badge">Oct 15</div>
-                    <h3>Scholarship Opportunities</h3>
-                    <p>New scholarships available for 2025 admissions...</p>
+                    <div class="date-badge">Jan 10</div>
+                    <h3>Admission Open for 2024</h3>
+                    <p>Applications are now open for all programs. Apply before the deadline.</p>
                     <a href="#">Read More</a>
                 </div>
                 <div class="announcement-card">
-                    <div class="date-badge">Oct 10</div>
-                    <h3>Campus Events</h3>
-                    <p>Join our upcoming women's empowerment seminar...</p>
+                    <div class="date-badge">Jan 08</div>
+                    <h3>New Campus Facilities</h3>
+                    <p>Exciting updates on our new library and computer labs.</p>
                     <a href="#">Read More</a>
                 </div>
-                <div class="announcement-card">
-                    <div class="date-badge">Oct 5</div>
-                    <h3>Application Deadline</h3>
-                    <p>Early bird applications close soon...</p>
-                    <a href="#">Read More</a>
-                </div>
-                <div class="announcement-card">
-                    <div class="date-badge">Sep 30</div>
-                    <h3>Alumni Spotlight</h3>
-                    <p>Meet our featured graduate...</p>
-                    <a href="#">Read More</a>
-                </div>
-                @endforelse
             </div>
         </div>
     </section>

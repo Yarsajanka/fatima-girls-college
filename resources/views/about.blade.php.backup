@@ -55,7 +55,7 @@
             <div class="about-section">
                 <h2>{{ $principalMessage->title }}</h2>
                 <div class="principal-message">
-                    
+                    <img src="{{ $principalMessage->image_path ? asset('storage/' . $principalMessage->image_path) : 'https://via.placeholder.com/200x250?text=Principal' }}" alt="Principal">
                     <p>{{ $principalMessage->content }}</p>
                 </div>
             </div>
