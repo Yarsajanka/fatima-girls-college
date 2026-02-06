@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fatima Girls College Amin Pur - Home</title>
+    <title>Fatima Girls College - Home</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     @vite(['resources/css/home.css'])
 </head>
@@ -11,11 +11,11 @@
     <!-- Header/Navbar -->
     <header class="header">
         <div class="logo">
-            <img src="{{ asset('images/college_logo.png') }}" alt="Fatima Girls College Amin Pur Logo" height="40">
+            <img src="{{ asset('images/college_logo.png') }}" alt="Fatima Girls College Logo" height="40">
         </div>
         <div>
   <p style="color: pink; font-weight: bold; font-style: italic;">
-    Fatima Girls College Amin Pur
+    Fatima Girls College
   </p>
 </div>
 
@@ -34,7 +34,7 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1 class="college-name">Fatima Girls College Amin Pur</h1>
+            <h1 class="college-name">Fatima Girls College</h1>
             <h4>Empowering Women Through Education</h4>
             <p>Admissions Open for 2025</p>
             <div class="buttons">
@@ -143,7 +143,7 @@
                 </ul>
             </div>
             <div class="why-image">
-                <img src="{{ asset('images/campusiamge.jpeg') }}" alt="Fatima Girls College Amin Pur Campus">
+                <img src="{{ asset('images/campusiamge.jpeg') }}" alt="Fatima Girls College Campus">
             </div>
         </div>
     </section>
@@ -173,7 +173,7 @@
             <div class="footer-grid">
                 <div>
                     <h3>About College</h3>
-                    <p>Empowering women through quality education...</p>
+                    <p>Empowering individuals to unlock their potential. Where ambitions are formed and goals accomplished according to 21st-century skills standards, enriched with Islamic values.</p>
                 </div>
                 <div>
                     <h3>Important Links</h3>
@@ -183,7 +183,7 @@
                 </div>
                 <div>
                     <h3>Contact Info</h3>
-                    <p>123 College St, City<br>Phone: (123) 456-7890<br>Email: info@college.edu</p>
+                    <p>Opposite to Molana Muhammad Zakir Degree College Aminpur Bangla<br>Phone: 03214251905<br>Email: fgcollege86@gmail.com</p>
                 </div>
             </div>
         </div>

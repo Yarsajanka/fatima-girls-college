@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('content', function (Blueprint $table) {
             $table->id();
-            $table->enum('type', ['slider', 'news', 'announcement', 'gallery', 'vision', 'mission', 'history', 'principal_message', 'admission_schedule', 'eligibility_criteria', 'required_documents', 'admission_guidelines', 'contact'])->default('news');
+            $table->string('type')->default('news');
             $table->string('title');
             $table->text('content')->nullable();
             $table->string('image_path')->nullable();
