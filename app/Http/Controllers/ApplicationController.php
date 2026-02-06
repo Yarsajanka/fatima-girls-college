@@ -4,12 +4,19 @@ namespace App\Http\Controllers;
 
 use App\Models\Application;
 use App\Models\Program;
+use App\Models\Content;
 use Illuminate\Http\Request;
 
 class ApplicationController extends Controller
 {
     public function create()
     {
+        $admissionsOpen = Content::where('type', 'admission_status')->where('is_active', true)->value('content') === 'open';
+
+        if (!$admissionsOpen) {
+            return view('admission_closed');
+        }
+
         $programs = Program::all();
         return view('apply', compact('programs'));
     }

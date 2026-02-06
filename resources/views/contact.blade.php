@@ -118,7 +118,7 @@
         }
         .contact-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: 1fr;
             gap: 30px;
         }
         .contact-card {
@@ -426,7 +426,7 @@
             <div class="footer-grid">
                 <div>
                     <h3>About College</h3>
-                    <p>Empowering women through quality education...</p>
+                    <p>Empowering individuals to unlock their potential. Where ambitions are formed and goals accomplished according to 21st-century skills standards, enriched with Islamic values.</p>
                 </div>
                 <div>
                     <h3>Important Links</h3>
@@ -436,7 +436,7 @@
                 </div>
                 <div>
                     <h3>Contact Info</h3>
-                    <p>123 College St, City<br>Phone: (123) 456-7890<br>Email: info@college.edu</p>
+                    <p>Opposite to Molana Muhammad Zakir Degree College Aminpur Bangla<br>Phone: 03214251905<br>Email: fgcollege86@gmail.com</p>
                 </div>
             </div>
         </div>

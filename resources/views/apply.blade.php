@@ -3,24 +3,214 @@
 @section('title', 'Apply Online - Fatima Girls College')
 
 @section('content')
-<div class="container my-5">
-    <h1 class="text-center mb-5">Online Application Form</h1>
+<style>
+    /* Hide navigation bar on apply page */
+    nav {
+        display: none !important;
+    }
+    
+    .form-container {
+        background: linear-gradient(135deg, #cbd0f3 0%, #764ba2 100%);
+        min-height: 100vh;
+        padding: 40px 0;
+    }
+    
+    .application-card {
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+        overflow: hidden;
+    }
+    
+    .card-header {
+        background: linear-gradient(135deg, #1a3af0 0%, #fefefe 100%) !important;
+        padding: 30px !important;
+        border-bottom: none;
+    }
+    
+    .card-header h4 {
+        font-size: 24px;
+        font-weight: 600;
+        margin: 0;
+    }
+    
+    .progress {
+        height: 8px;
+        border-radius: 10px;
+        background-color: #e9ecef;
+        margin-bottom: 30px;
+    }
+    
+    .progress-bar {
+        background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+        border-radius: 10px;
+        font-size: 12px;
+        font-weight: 600;
+    }
+    
+    .step-intro {
+        background-color: #ea1d91;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        border-left: 4px solid #667eea;
+    }
+    
+    .step-intro h5 {
+        color: #667eea;
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
+    
+    .form-label {
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 8px;
+        font-size: 14px;
+    }
+    
+    .form-control, .form-select {
+        border: 2px solid #e9ecef;
+        border-radius: 8px;
+        padding: 12px 15px;
+        font-size: 14px;
+        transition: all 0.3s ease;
+    }
+    
+    .form-control:focus, .form-select:focus {
+        border-color: #667eea;
+        box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.1);
+    }
+    
+    .button-group {
+        display: flex;
+        gap: 15px;
+        margin-top: 40px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    .btn {
+        padding: 12px 30px;
+        font-size: 15px;
+        font-weight: 600;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    
+    .btn-secondary {
+        background-color: #6c757d;
+        color: white;
+    }
+    
+    .btn-secondary:hover {
+        background-color: #5a6268;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(108, 117, 125, 0.3);
+    }
+    
+    .btn-secondary:disabled {
+        background-color: #d3d3d3;
+        cursor: not-allowed;
+        transform: none;
+    }
+    
+    .btn-primary {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+    }
+    
+    .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+    }
+    
+    .btn-success {
+        background: linear-gradient(135deg, #56ab2f 0%, #a8edea 100%);
+        color: white;
+    }
+    
+    .btn-success:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(86, 171, 47, 0.4);
+    }
+    
+    .step {
+        display: none;
+    }
+    
+    .step.active {
+        display: block;
+        animation: fadeIn 0.3s ease-in;
+    }
+    
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    .alert {
+        border: none;
+        border-radius: 8px;
+        border-left: 4px solid;
+    }
+    
+    .alert-info {
+        background-color: #e7f3ff;
+        border-left-color: #2196F3;
+        color: #0c5aa0;
+    }
+    
+    .alert-warning {
+        background-color: #fff3cd;
+        border-left-color: #ffc107;
+        color: #856404;
+    }
+    
+    .accordion-button {
+        font-weight: 600;
+        color: #667eea;
+    }
+    
+    .accordion-button:not(.collapsed) {
+        background-color: #f8f9ff;
+        color: #667eea;
+    }
+</style>
 
-    <div class="row justify-content-center">
-        <div class="col-lg-10">
-            <div class="card">
-                <div class="card-header bg-primary text-white">
-                    <h4 class="mb-0">Step-by-Step Application Process</h4>
-                </div>
-                <div class="card-body">
-                    <div class="progress mb-4">
-                        <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Step 1 of 6</div>
+<div class="form-container">
+    <div class="container my-5">
+        <h1 class="text-center mb-2" style="color: white; font-weight: 700; font-size: 36px;">Online Application Form</h1>
+        <p class="text-center mb-5" style="color: rgba(255,255,255,0.9); font-size: 16px;">Fatima Girls College - Admission 2026</p>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="card application-card">
+                    <div class="card-header">
+                        <h4 class="text-white">📝 Step-by-Step Application Process</h4>
                     </div>
+                    <div class="card-body p-5">
+                        <div class="progress mb-4">
+                            <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">Step 1 of 6</div>
+                        </div>
 
                     <form id="applicationForm">
                         <!-- Step 1: Personal Information -->
                         <div class="step active" id="step1">
-                            <h5 class="mb-4">Step 1: Personal Information</h5>
+                            <div class="step-intro">
+                                <h5>👤 Personal Information</h5>
+                                <p class="mb-0 text-muted">Please provide your basic personal details</p>
+                            </div>
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label for="fullName" class="form-label">Full Name *</label>
@@ -63,7 +253,10 @@
 
                         <!-- Step 2: Parent/Guardian Information -->
                         <div class="step" id="step2">
-                            <h5 class="mb-4">Step 2: Parent/Guardian Information</h5>
+                            <div class="step-intro">
+                                <h5>👨‍👩‍👧 Parent/Guardian Information</h5>
+                                <p class="mb-0 text-muted">Tell us about your parent or guardian</p>
+                            </div>
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label for="fatherName" class="form-label">Father's Name *</label>
@@ -98,7 +291,10 @@
 
                         <!-- Step 3: Academic Information -->
                         <div class="step" id="step3">
-                            <h5 class="mb-4">Step 3: Academic Information</h5>
+                            <div class="step-intro">
+                                <h5>🎓 Academic Information</h5>
+                                <p class="mb-0 text-muted">Share your educational background and performance</p>
+                            </div>
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label for="previousSchool" class="form-label">Previous School/College Name *</label>
@@ -137,7 +333,10 @@
 
                         <!-- Step 4: Program Selection -->
                         <div class="step" id="step4">
-                            <h5 class="mb-4">Step 4: Program Selection</h5>
+                            <div class="step-intro">
+                                <h5>📚 Program Selection</h5>
+                                <p class="mb-0 text-muted">Choose the program that matches your interests</p>
+                            </div>
                             <div class="mb-3">
                                 <label for="program" class="form-label">Select Program *</label>
                                 <select class="form-select" id="program" required>
@@ -157,10 +356,11 @@
 
                         <!-- Step 5: Document Uploads -->
                         <div class="step" id="step5">
-                            <h5 class="mb-4">Step 5: Document Uploads</h5>
+                            <div class="step-intro">
+                                <h5>📄 Document Uploads</h5>
+                                <p class="mb-0 text-muted">Upload required documents (PDF/JPG, max 2MB each)</p>
+                            </div>
                             <p class="text-muted mb-4">Please upload scanned copies of the following documents (PDF/JPG format, max 2MB each):</p>
-
-                            <div class="mb-3">
                                 <label for="cnicCopy" class="form-label">CNIC/B-Form Copy *</label>
                                 <input type="file" class="form-control" id="cnicCopy" accept=".pdf,.jpg,.jpeg" required>
                             </div>
@@ -188,7 +388,10 @@
 
                         <!-- Step 6: Review & Submit -->
                         <div class="step" id="step6">
-                            <h5 class="mb-4">Step 6: Review & Submit</h5>
+                            <div class="step-intro">
+                                <h5>✅ Review & Submit</h5>
+                                <p class="mb-0 text-muted">Please verify all information before submitting</p>
+                            </div>
                             <div class="alert alert-warning">
                                 <strong>Important:</strong> Please review all information carefully. Once submitted, you cannot edit your application.
                             </div>
@@ -241,12 +444,19 @@
                         </div>
 
                         <!-- Navigation Buttons -->
-                        <div class="d-flex justify-content-between mt-4">
-                            <button type="button" class="btn btn-secondary" id="prevBtn" disabled>Previous</button>
-                            <button type="button" class="btn btn-primary" id="nextBtn">Next</button>
-                            <button type="submit" class="btn btn-success d-none" id="submitBtn">Submit Application</button>
+                        <div class="button-group">
+                            <button type="button" class="btn btn-secondary" id="prevBtn" disabled>
+                                ← Previous Step
+                            </button>
+                            <button type="button" class="btn btn-primary" id="nextBtn">
+                                Next Step →
+                            </button>
+                            <button type="submit" class="btn btn-success d-none" id="submitBtn">
+                                ✓ Submit Application
+                            </button>
                         </div>
                     </form>
+                    </div>
                 </div>
             </div>
         </div>
